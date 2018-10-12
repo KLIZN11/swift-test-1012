@@ -7,6 +7,20 @@
 //
 
 import Foundation
+func getSum(number: Int) -> Int {
+    func getFactorial(num: Int) -> Int {
+        var sum = 1
+        for i in 1...num {
+            sum *= i
+        }
+        return sum
+    }
+    var total = 0
+    for i in 1...number{
+        total += getFactorial(num: i)
+    }
+    return total
+}
+print(getSum(number: 4))
 
-print("Hello, World!")
 
